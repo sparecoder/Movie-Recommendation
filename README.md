@@ -1,7 +1,3 @@
-Here's a simple `README.md` file for your Movie Recommender System project that explains the setup process, including creating an environment, obtaining the API key, and running the necessary files.
-
----
-
 # Movie Recommender System
 
 This is a Movie Recommender System built using machine learning and Streamlit. The system recommends movies based on the user's selected movie. The system fetches movie posters using The Movie Database (TMDb) API.
@@ -117,6 +113,3 @@ movie-recommender/
 * Ensure that you do not push the `.env` file to any public repositories, as it contains sensitive information (your API key). You should add `.env` to your `.gitignore` file.
 * If you encounter issues with the API key, check that it is correctly stored in the `.env` file and that it's being loaded properly by the code.
 
----
-
-Let me know if you'd like any further adjustments!
