@@ -1,12 +1,15 @@
+import os
 import streamlit as st
 import pickle
 import pandas as pd
 import requests
+from dotenv import load_dotenv
 
-
+load_dotenv()
 
 def fetch_poster(movie_id):
-    response= requests.get('https://api.themoviedb.org/3/movie/{}?api_key=41a5a57f06316d7263ba631e2f8c9ae1&&language=en-US'.format(movie_id))
+    api_key = os.getenv('TMDB_API_KEY')
+    response = requests.get(f'https://api.themoviedb.org/3/movie/{movie_id}?api_key={api_key}&language=en-US'.format(movie_id))
     data=response.json()
     # return st.text(data)
     return "https://image.tmdb.org/t/p/original" +data['poster_path']
